@@ -1,0 +1,14 @@
+{% load rest_framework staticfiles %}
+
+<html><body>
+
+<h1></h1>
+
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    {% render_form serializer %}
+    <input type="submit" value="login">
+</form>
+
+<a href="{% url 'resetpassword' %}">Forgot password</a> 
+</body></html>

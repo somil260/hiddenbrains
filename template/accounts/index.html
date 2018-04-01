@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+    {% if user.id %} 
+		welcome {{user}}
+       <a href="{% url 'setpassword' user.id %}">Set password</a> 
+     {% else %}
+     	<a href="{% url 'login' %}">login</a> 
+     	
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+{% load rest_framework %}
+
+<html><body>
+
+<h1></h1>
+
+<form action="{% url 'signup' %}" method="POST">
+    {% csrf_token %}
+    {% render_form serializer %}
+    <input type="submit" value="signup">
+</form>
+
+</body></html>
